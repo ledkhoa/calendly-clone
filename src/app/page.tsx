@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className='text-center container my-4 mx-auto'>
       <h1 className='text-3xl mb-4'>iCalendar</h1>
-      <div className='flex gap-2 justify-center'>
+      <div className='flex gap-2 justify-center bg-accent-foreground'>
         <Button asChild>
           <SignInButton />
         </Button>
