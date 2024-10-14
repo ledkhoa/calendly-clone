@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <div className='text-center container my-4 mx-auto'>
-      <h1 className='text-3xl mb-4'>iCalendar</h1>
+      <h1 className='text-3xl mb-4 text-primary'>iCalendar</h1>
       <div className='flex gap-2 justify-center'>
         <Button asChild>
           <SignInButton />

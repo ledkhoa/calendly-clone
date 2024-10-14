@@ -11,7 +11,9 @@ const PrivateLayout = ({ children }: { children: ReactNode }) => {
           <div className='flex items-center gap-2 font-semibold mr-auto'>
             <CalendarRange className='size-6' />
             {/*sr-only is screen reader only */}
-            <span className='sr-only md:not-sr-only'>iCalendar</span>
+            <span className='sr-only md:not-sr-only text-primary'>
+              iCalendar
+            </span>
           </div>
 
           <NavLink href='/events'>Events</NavLink>
