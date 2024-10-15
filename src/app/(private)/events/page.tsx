@@ -1,11 +1,12 @@
 import { Button } from '@/components/ui/button';
 import EventsGrid from '@/components/ui/events/EventsGrid';
 import EventsGridSkeleton from '@/components/ui/events/EventsGridSkeleton';
-import { db } from '@/drizzle/db';
-import { auth } from '@clerk/nextjs/server';
-import { CalendarPlus, CalendarRangeIcon } from 'lucide-react';
+import { CalendarPlus } from 'lucide-react';
 import Link from 'next/link';
 import { Suspense } from 'react';
+
+// https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating
+export const revalidate = 0;
 
 const Events = async () => {
   return (

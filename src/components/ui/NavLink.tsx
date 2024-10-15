@@ -7,7 +7,11 @@ import { ComponentProps } from 'react';
 
 const NavLink = ({ className, ...props }: ComponentProps<typeof Link>) => {
   const path = usePathname();
-  const isActive = path === props.href;
+
+  const pathSplit = path.split('/');
+  const hrefSplit = props.href.toString().split('/');
+
+  const isActive = pathSplit[1] === hrefSplit[1];
 
   return (
     <Link
