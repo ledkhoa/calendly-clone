@@ -13,13 +13,15 @@ import {
   CardTitle,
 } from '../card';
 import { cn } from '@/lib/utils';
-import { formatEventDescription } from '@/lib/formater';
+import { formatEventDescription } from '@/lib/formatter';
 import { CopyEventButton } from './CopyEventButton';
 
 const EventsGrid = async () => {
   const { userId, redirectToSignIn } = auth();
 
   if (!userId) {
+    // this isn't necessary as redirect is handled in middleware.ts
+    // this if check just guarantees userId is not null
     return redirectToSignIn();
   }
 
@@ -36,7 +38,9 @@ const EventsGrid = async () => {
       ) : (
         <div className='flex flex-col items-center gap-4'>
           <CalendarRangeIcon className='size-16' />
-          <p>You don't have any events yet! Create an event to get started!</p>
+          <p>
+            You don&apos;t have any events yet! Create an event to get started!
+          </p>
           <Button size='lg' className='text-lg' asChild>
             <Link href='/events/new'>
               <CalendarPlus className='mr-4 size-6' />
