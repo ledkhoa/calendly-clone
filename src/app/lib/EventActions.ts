@@ -2,7 +2,7 @@
 import 'use-server'; // throws error if anything here is used outside of server
 import { db } from '@/drizzle/db';
 import { z } from 'zod';
-import { eventFormSchema } from '@/schema/eventSchemas';
+import { eventFormSchema } from '@/form-schemas/eventSchemas';
 import { EventsTable } from '@/drizzle/schema';
 import { auth } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
