@@ -5,7 +5,7 @@ import { Textarea } from '../textarea';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { eventFormSchema } from '@/schema/eventSchemas';
+import { eventFormSchema } from '@/form-schemas/eventSchemas';
 import {
   Form,
   FormControl,
@@ -167,7 +167,7 @@ const EventForm = ({
                 {' '}
                 <Button
                   type='button'
-                  variant={'destructive'}
+                  variant={'delete'}
                   disabled={isDeletePending || form.formState.isSubmitting}
                 >
                   Delete
