@@ -189,7 +189,7 @@ const ScheduleForm = ({
                       <Button
                         type='button'
                         className='size-6 p-1'
-                        variant={'destructive'}
+                        variant={'delete'}
                         onClick={() => deleteAvailability(field.index)}
                       >
                         <X />

@@ -7,6 +7,7 @@ import { ScheduleAvailabilityTable, SchedulesTable } from '@/drizzle/schema';
 import { BatchItem } from 'drizzle-orm/batch';
 import { eq } from 'drizzle-orm';
 import { scheduleFormSchema } from '@/form-schemas/scheduleSchemas';
+import { revalidatePath } from 'next/cache';
 
 export const getSchedule = async (userId: string) => {
   return await db.query.SchedulesTable.findFirst({
@@ -54,4 +55,5 @@ export const addSchedule = async (
   }
 
   await db.batch(statements);
+  revalidatePath('/schedule');
 };
