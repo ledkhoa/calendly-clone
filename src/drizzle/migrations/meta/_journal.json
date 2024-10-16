@@ -8,6 +8,13 @@
       "when": 1728834797331,
       "tag": "0000_complete_phalanx",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1729106605339,
+      "tag": "0001_tidy_blindfold",
+      "breakpoints": true
     }
   ]
 }
