@@ -2,11 +2,11 @@
 import 'use-server'; // throws error if anything here is used outside of server
 import { db } from '@/drizzle/db';
 import { z } from 'zod';
-import { scheduleFormSchema } from '@/schema/scheduleSchemas';
 import { auth } from '@clerk/nextjs/server';
 import { ScheduleAvailabilityTable, SchedulesTable } from '@/drizzle/schema';
 import { BatchItem } from 'drizzle-orm/batch';
 import { eq } from 'drizzle-orm';
+import { scheduleFormSchema } from '@/form-schemas/scheduleSchemas';
 
 export const getSchedule = async (userId: string) => {
   return await db.query.SchedulesTable.findFirst({

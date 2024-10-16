@@ -14,7 +14,6 @@ import {
 import { Button } from '../button';
 import { useToast } from '@/hooks/use-toast';
 import { DAY_OF_WEEK } from '@/constants/constants';
-import { scheduleFormSchema } from '@/schema/scheduleSchemas';
 import { timeToInt } from '@/lib/utils';
 import {
   Select,
@@ -27,6 +26,7 @@ import { formatTimezoneOffset } from '@/lib/formatter';
 import { Plus, X } from 'lucide-react';
 import { Input } from '../input';
 import { addSchedule } from '@/app/lib/ScheduleActions';
+import { scheduleFormSchema } from '@/form-schemas/scheduleSchemas';
 
 type Availability = {
   startTime: string;

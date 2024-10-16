@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { CalendarRange } from 'lucide-react';
 import { UserButton } from '@clerk/nextjs';
 import NavLink from '@/components/ui/NavLink';
+import ThemeDropdown from '@/components/ui/ThemeDropdown';
 const PrivateLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
@@ -9,11 +10,9 @@ const PrivateLayout = ({ children }: { children: ReactNode }) => {
         <nav className='font-medium flex items-center text-sm gap-6 container'>
           {/* mr-auto is margin right - pushes element as far left as possible */}
           <div className='flex items-center gap-2 font-semibold mr-auto'>
-            <CalendarRange className='size-6' />
+            <CalendarRange className='size-6 text-primary' />
             {/*sr-only is screen reader only */}
-            <span className='sr-only md:not-sr-only text-primary'>
-              iCalendar
-            </span>
+            <span className='sr-only md:not-sr-only'>iCalendar</span>
           </div>
 
           <NavLink href='/events'>Events</NavLink>
@@ -27,6 +26,9 @@ const PrivateLayout = ({ children }: { children: ReactNode }) => {
               }}
             />
           </div>
+
+          {/* Theme dropdown */}
+          <ThemeDropdown />
         </nav>
       </header>
       <main className='container my-6'>{children}</main>
